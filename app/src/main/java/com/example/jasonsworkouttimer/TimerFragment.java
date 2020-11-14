@@ -103,9 +103,10 @@ public class TimerFragment extends Fragment{
                     tv.setText(String.format("%02d : %02d : %02d", hour, min, sec));
                     seconds--;
                 }
-                /*else if(!paused && (seconds == 0))
+                else if(!paused && (seconds == 0)) {
                     fab.setEnabled(false);
-                    tv.setText("You did it!");*/
+                    tv.setText("You did it!");
+                }
                 handler.postDelayed(this, 1000);
             }
         });
